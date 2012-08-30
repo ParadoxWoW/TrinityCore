@@ -1,0 +1,34 @@
+Add voter updates to World::Update
+Use this commit as a guide: https://github.com/TrinityCore/TrinityCore/commit/07e645d024bc3c3fb5a2707e51ca807e63225594
+
+General:
+    Add ranks to .announce
+    Rename/port Arcemu commands
+    Add voter updates to World::Update
+    Use this commit as a guide: https://github.com/TrinityCore/TrinityCore/commit/07e645d024bc3c3fb5a2707e51ca807e63225594
+
+GameObject:
+    Implement .gameobject select
+    Implement gameobject ownership system
+    Store owner's guid in the gobject table
+    Make .gobj select show the gobject owner's name ("World" for default)
+        ? Allow players to allow others to modify their gameobjects ?
+                                                        
+
+NPC:
+    Add spawn timer for non-voters (15 seconds)
+    Don't allow mall NPCs to be deleted
+    Don't allow instance NPCs to be deleted
+
+Administration:
+    Announce kicks/bans/mutes in .ann
+    Don't allow voters to see .gma or ticket-related announcements
+
+Grief-Prevention:
+    Implement .toggle modify    Try to have a check somewhere before the command is actually executed to avoid adding checks to every comamand
+    Implement .toggle appear/summon
+
+Disables:
+    Implement custom disables
+    Move .disable to .server disable
+    add a .server enable command
