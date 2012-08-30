@@ -46,10 +46,10 @@ public:
         static ChatCommand commandTable[] =
         {
             { "channel",        SEC_ADMINISTRATOR,  true,   NULL,                               "", channelCommandTable  },
-            { "nameannounce",   SEC_MODERATOR,      true,   &HandleNameAnnounceCommand,         "", NULL },
-            { "gmnameannounce", SEC_MODERATOR,      true,   &HandleGMNameAnnounceCommand,       "", NULL },
-            { "announce",       SEC_MODERATOR,      true,   &HandleAnnounceCommand,             "", NULL },
-            { "gmannounce",     SEC_MODERATOR,      true,   &HandleGMAnnounceCommand,           "", NULL },
+            { "announce",   SEC_MODERATOR,      true,   &HandleNameAnnounceCommand,         "", NULL },
+            { "gmannounce", SEC_MODERATOR,      true,   &HandleGMNameAnnounceCommand,       "", NULL },
+            { "systemannounce",       SEC_MODERATOR,      true,   &HandleAnnounceCommand,             "", NULL },
+            //{ "gmannounce",     SEC_MODERATOR,      true,   &HandleGMAnnounceCommand,           "", NULL },
             { "notify",         SEC_MODERATOR,      true,   &HandleNotifyCommand,               "", NULL },
             { "gmnotify",       SEC_MODERATOR,      true,   &HandleGMNotifyCommand,             "", NULL },
             { "whispers",       SEC_MODERATOR,      false,  &HandleWhispersCommand,             "", NULL },

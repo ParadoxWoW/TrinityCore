@@ -33,7 +33,7 @@ public:
 
     ChatCommand* GetCommands() const
     {
-        static ChatCommand modifyspeedCommandTable[] =
+        /*static ChatCommand modifyspeedCommandTable[] =
         {
             { "fly",            SEC_MODERATOR,      false, &HandleModifyFlyCommand,           "", NULL },
             { "all",            SEC_MODERATOR,      false, &HandleModifyASpeedCommand,        "", NULL },
@@ -42,7 +42,7 @@ public:
             { "swim",           SEC_MODERATOR,      false, &HandleModifySwimCommand,          "", NULL },
             { "",               SEC_MODERATOR,      false, &HandleModifyASpeedCommand,        "", NULL },
             { NULL,             0,                  false, NULL,                              "", NULL }
-        };
+        };*/
         static ChatCommand modifyCommandTable[] =
         {
             { "hp",             SEC_MODERATOR,      false, &HandleModifyHPCommand,            "", NULL },
@@ -64,12 +64,13 @@ public:
             { "standstate",     SEC_GAMEMASTER,     false, &HandleModifyStandStateCommand,    "", NULL },
             { "phase",          SEC_ADMINISTRATOR,  false, &HandleModifyPhaseCommand,         "", NULL },
             { "gender",         SEC_GAMEMASTER,     false, &HandleModifyGenderCommand,        "", NULL },
-            { "speed",          SEC_MODERATOR,      false, NULL,           "", modifyspeedCommandTable },
+            { "speed",          SEC_MODERATOR,      false, &HandleModifyASpeedCommand,           "", NULL },
+            { "displayid",          SEC_GAMEMASTER,     false, &HandleModifyMorphCommand,          "", NULL },
             { NULL,             0,                  false, NULL,                                           "", NULL }
         };
         static ChatCommand commandTable[] =
         {
-            { "morph",          SEC_GAMEMASTER,     false, &HandleModifyMorphCommand,          "", NULL },
+            //{ "morph",          SEC_GAMEMASTER,     false, &HandleModifyMorphCommand,          "", NULL },
             { "demorph",        SEC_GAMEMASTER,     false, &HandleDeMorphCommand,              "", NULL },
             { "modify",         SEC_MODERATOR,      false, NULL,                 "", modifyCommandTable },
             { NULL,             0,                  false, NULL,                               "", NULL }
